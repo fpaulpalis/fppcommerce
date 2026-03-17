@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import LogoIcon from "./icons/logo";
+import Image from "next/image";
 
 export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
   return (
@@ -12,8 +12,13 @@ export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
         },
       )}
     >
-      <LogoIcon
-        className={clsx({
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={size === "sm" ? 40 : 60}
+        height={size === "sm" ? 40 : 60}
+        priority // Added priority since this is usually in the header above the fold
+        className={clsx("object-contain", {
           "h-[60px] w-[60px]": !size,
           "h-[40px] w-[40px]": size === "sm",
         })}
