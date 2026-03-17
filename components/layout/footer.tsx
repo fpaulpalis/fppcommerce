@@ -55,6 +55,7 @@ export default async function Footer() {
           <p>
             ITE 401 - Platform Technologies
           </p>
+
         </div>
       </div>
     </footer>
