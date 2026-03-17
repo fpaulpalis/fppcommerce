@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function LogoIcon({ className, width, height }: LogoIconProps) {
+export default function LogoIcon(props: React.ComponentProps<"svg">) {
   return (
     <Image
       src={"/logo.png"}
